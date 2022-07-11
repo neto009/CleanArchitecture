@@ -1,16 +1,20 @@
-package br.com.alura.escola.dominio.Aluno;
+package br.com.alura.escola.dominio.aluno;
 
 public class Email {
-    private String endereco;
+	
+	private String endereco;
 
-    public Email(String endereco){
-        if(endereco == null || !endereco.matches("^[a-zA-Z0-9._]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$")){
-            throw new IllegalArgumentException("E-mail invalido!");
-        }
-        this.endereco = endereco;
-    }
+	public Email(String endereco) {
+		if (endereco == null || 
+				!endereco.matches("^[a-zA-Z0-9._]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$")) {
+			throw new IllegalArgumentException("E-mail invalido!");
+		}
 
-    public String getEndereco() {
-        return endereco;
-    }
+		this.endereco = endereco;
+	}
+	
+	public String getEndereco() {
+		return endereco;
+	}
+
 }
